@@ -6,14 +6,27 @@
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "antd": "^5.20.3",
+    "concurrently": "^8.2.2",
+    "qiankun": "^2.10.16",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-router-dom": "^6.26.1",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "concurrently \"npm run start:main\" \"npm run start:sub-app1\"",
+    "install:all": "concurrently \"npm run install:sub-app1\" \"npm run install:sub-app2\" \"npm install\"",
+    "build": "concurrently \"npm run build:main\" \"npm run build:sub-app1\" \"npm run build:sub-app2\"",
+    "start:main": "react-scripts start",
+    "start:sub-app1": "cd ../sub-app1 && npm start",
+    "start:sub-app2": "cd ../sub-app2 && react-scripts start",
+    "install:sub-app1": "cd ../sub-app1 && npm install",
+    "install:sub-app2": "cd ../sub-app2 && npm install",
+    "build:main": "react-scripts build",
+    "build:sub-app1": "cd sub-app1 && react-scripts build",
+    "build:sub-app2": "cd sub-app2 && react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -34,5 +47,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "webpack": "^5.94.0"
   }
 }
