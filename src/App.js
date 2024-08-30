@@ -20,7 +20,7 @@ function App() {
         <Menu
           theme="dark"
           mode="horizontal"
-          defaultSelectedKeys={['2']}
+          defaultSelectedKeys={['1']}
           style={{ flex: 1 }}
           items={[
             {
@@ -30,7 +30,7 @@ function App() {
             },{
               key: "2",
               icon: <VideoCameraOutlined />,
-              label: <NavLink to="/">react 2 应用</NavLink>
+              label: <NavLink to="/react-micro2">react 2 应用</NavLink>
             }
           ]}
         />

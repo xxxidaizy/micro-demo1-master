@@ -16,12 +16,12 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "concurrently \"npm run start:main\" \"npm run start:sub-app1\"",
+    "start": "concurrently \"npm run start:main\" \"npm run start:sub-app1\" \"npm run start:sub-app2\"",
     "install:all": "concurrently \"npm run install:sub-app1\" \"npm run install:sub-app2\" \"npm install\"",
     "build": "concurrently \"npm run build:main\" \"npm run build:sub-app1\" \"npm run build:sub-app2\"",
     "start:main": "react-scripts start",
     "start:sub-app1": "cd ../sub-app1 && npm start",
-    "start:sub-app2": "cd ../sub-app2 && react-scripts start",
+    "start:sub-app2": "cd ../sub-app2 && npm start",
     "install:sub-app1": "cd ../sub-app1 && npm install",
     "install:sub-app2": "cd ../sub-app2 && npm install",
     "build:main": "react-scripts build",
