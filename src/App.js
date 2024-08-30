@@ -2,7 +2,6 @@ import React from 'react';
 import { Layout, Menu } from 'antd';
 import { VideoCameraOutlined } from "@ant-design/icons"
 import { NavLink } from "react-router-dom";
-import logo from './logo.svg';
 import './App.css';
 
 const { Header, Content, Footer } = Layout;
@@ -16,11 +15,12 @@ function App() {
           alignItems: 'center'
         }}
       >
-        <div className="demo-logo"><h1 style={{ color: '#fff' }}>名称</h1></div>
+        <div className="demo-logo">
+          <NavLink style={{ color: '#fff', marginRight: 30 }} to="/">micor-app-demo</NavLink>
+        </div>
         <Menu
           theme="dark"
           mode="horizontal"
-          defaultSelectedKeys={['1']}
           style={{ flex: 1 }}
           items={[
             {
@@ -40,9 +40,8 @@ function App() {
         id="container"
       >
         <h1>主应用显示容器</h1 >
-        <img src={logo} className="App-logo" alt="logo" />
       </Content >
-      <Footer style={{ textAlign: 'center' }}>Ant Design ©2023 Created by Ant UED</Footer >
+      <Footer style={{ textAlign: 'center' }}>Ant Design Created by Ant UED</Footer >
     </Layout >
   )
 }
