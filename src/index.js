@@ -13,7 +13,7 @@ registerMicroApps([
     name: "sub-app1", //子应用的名称，必须唯-。
     entry: "http://localhost:3001",//子应用项目本地运行地址
     container: "#container", // 子应用的容器(子应用嵌入到主项目id为container的容器)
-    activeRule: "/react-micro1",// 子应用激活时的路由规则(子应用路由)
+    activeRule: "/micro1",// 子应用激活时的路由规则(子应用路由)
     props: { //向子应用传参
       state: false,
       userId: "userId",
@@ -24,7 +24,7 @@ registerMicroApps([
     name: "sub-app2", //子应用的名称，必须唯-。
     entry: "http://localhost:3002",//子应用项目本地运行地址
     container: "#container", // 子应用的容器(子应用嵌入到主项目id为container的容器)
-    activeRule: "/react-micro2",// 子应用激活时的路由规则(子应用路由)
+    activeRule: "/micro2",// 子应用激活时的路由规则(子应用路由)
     props: { //向子应用传参
       state: false,
       userId: "userId",
@@ -35,7 +35,7 @@ registerMicroApps([
     name: "sub-app3", //子应用的名称，必须唯-。
     entry: "http://localhost:3003",//子应用项目本地运行地址
     container: "#container", // 子应用的容器(子应用嵌入到主项目id为container的容器)
-    activeRule: "/react-micro3",// 子应用激活时的路由规则(子应用路由)
+    activeRule: "/micro3",// 子应用激活时的路由规则(子应用路由)
     props: { //向子应用传参
       state: false,
       userId: "userId",
@@ -44,11 +44,11 @@ registerMicroApps([
   }
 ]);
 
-setDefaultMountApp('/');
-
+// setDefaultMountApp('/');
 runAfterFirstMounted(() => console.info('first app mounted'));
-
-start();
+start({
+  prefetch: false
+});
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

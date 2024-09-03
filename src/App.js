@@ -26,15 +26,15 @@ function App() {
             {
               key: "1",
               icon: <VideoCameraOutlined />,
-              label: <NavLink to="/react-micro1">react 应用1</NavLink>
+              label: <NavLink to="/micro1">react 应用1</NavLink>
             },{
               key: "2",
               icon: <VideoCameraOutlined />,
-              label: <NavLink to="/react-micro2">react 应用2</NavLink>
+              label: <NavLink to="/micro2">react 应用2</NavLink>
             },{
               key: "3",
               icon: <VideoCameraOutlined />,
-              label: <NavLink to="/react-micro3">vue 应用</NavLink>
+              label: <NavLink to="/micro3">vue 应用</NavLink>
             }
           ]}
         />
