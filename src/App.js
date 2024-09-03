@@ -26,17 +26,21 @@ function App() {
             {
               key: "1",
               icon: <VideoCameraOutlined />,
-              label: <NavLink to="/react-micro1">react 1 应用</NavLink>
+              label: <NavLink to="/react-micro1">react 应用1</NavLink>
             },{
               key: "2",
               icon: <VideoCameraOutlined />,
-              label: <NavLink to="/react-micro2">react 2 应用</NavLink>
+              label: <NavLink to="/react-micro2">react 应用2</NavLink>
+            },{
+              key: "3",
+              icon: <VideoCameraOutlined />,
+              label: <NavLink to="/react-micro3">vue 应用</NavLink>
             }
           ]}
         />
       </Header >
       <Content
-        style={{ height: 'calc(100vh - 128px)', backgroundColor: '#b4efe1' }}
+        style={{ height: 'calc(100vh - 128px)', backgroundColor: '#282c34', color: '#fff' }}
         id="container"
       >
         <h1>主应用显示容器</h1 >
